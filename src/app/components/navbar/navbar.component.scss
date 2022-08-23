@@ -1,0 +1,171 @@
+nav{
+  width: 100%;
+  background-color: #fff;
+  height: 65px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+}
+.toggle
+{
+  width: 40px;
+  position: absolute;
+  padding: 5px;
+  background-color: transparent;
+  border-radius:5px;
+  border-color: #38c6d9;
+  font-size: 20px;
+  display: none;
+  right: 0;
+}
+
+.logo a
+{
+  display: flex;
+  color: #000;
+}
+.logo img
+{
+  width: 100%;
+  height: 100%;
+}
+.wrapper-nave
+{
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul
+{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+nav ul a
+{
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+nav ul li:last-child a
+{
+  display: flex;
+  align-items:center !important;
+}
+nav ul li:last-child i
+{
+  background:linear-gradient(to right, #71e2f0 ,#38c6d9);
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+// ===============================================================================
+
+@media(min-width:1100px){
+  .wrapper-nave{
+
+
+    .logo
+    {
+      .logofullscreen
+      {
+        display: block;
+      }
+      .logomobile
+      {
+        display: none;
+      }
+    }
+
+  }
+}
+
+@media(max-width:1100px){
+.wrapper-nave{
+  .logo
+  {
+    .logofullscreen
+    {
+      display: none;
+    }
+    .logomobile
+    {
+      width: 50px;
+    }
+  }
+
+}
+
+
+
+
+
+  nav ul a
+{
+  font-size: 12px;
+  font-weight: 700;
+}
+}
+@media(max-width:768px){
+.wrapper-nave{
+  position: relative;
+  width: 100%;
+  .toggle
+  {
+    display: block;
+  }
+  .logo
+  {
+    .logofullscreen
+    {
+      display: none;
+    }
+    .logomobile
+    {
+      width: 50px;
+      position: absolute;
+      top:-20px;
+      left: 0;
+    }
+
+  }
+  ul
+  {
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.543);
+    height: auto;
+    gap: 5px;
+    top: 30px;
+    transition: 0.5s;
+    &.active
+    {
+      visibility: visible;
+    opacity: 1;
+    }
+    li
+    {
+      border-bottom: 1px solid rgb(210, 208, 208);
+      width: 100%;
+      padding-inline:20px ;
+      padding-block: 0;
+
+      margin: 0;
+      a
+      {
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+}

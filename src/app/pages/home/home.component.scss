@@ -1,0 +1,77 @@
+.container
+{
+  width: 70%;
+  margin: auto;
+  height: 100vh;
+
+  // ==================steps start==========================
+.steps
+{
+  width: 100%;
+
+  margin-top: 50px;
+}
+  // ==================steps end==========================
+  // ==================wrapper-Chose start==========================
+
+.wrapper-Chose
+{
+  margin-top: 70px;
+
+  h3{
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 30px;
+  }
+  // ==================filter start==========================
+
+  .filter-resulte
+  {
+    display: flex;
+
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+  // ==================list start==========================
+
+  .list
+  {
+    width: 100%;
+  }
+  .footer-buttons
+  {
+    margin-top: 50px;
+    width: 100%;
+
+  }
+}
+  // ==================wrapper-Chose end==========================
+.details
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000 !important;
+}
+
+
+
+
+}
+// ================================media=======================================
+
+
+@media(max-width:890px){
+  .filter-resulte
+  {
+    flex-direction: column;
+
+  }
+  .list
+ {
+   width: 100%;
+ }
+
+}
+

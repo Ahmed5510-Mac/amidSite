@@ -1,0 +1,184 @@
+@mixin icon {
+  background-color: #f4b537;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px;
+}
+@mixin item{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.landing {
+  visibility: hidden;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.653);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.active{
+    visibility: visible;
+  }
+  .genral-details {
+    width: 50%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    // --------------------header --------------------
+    .header {
+      background-color: #0077c0;
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      padding: 10px;
+      color: #fff;
+    }
+    .container
+    {
+      padding-inline: 20px;
+        //<!------------- baseinfo----------- -->
+
+        .baseinfo {
+          //
+          .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+            border-radius: 6px;
+            i {
+             @include icon;
+            }
+            .image {
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #d2d0d0;
+            }
+            // ==============details==================
+            .detailss {
+              .title {
+                color: #0077c0;
+                font-weight: 900;
+                text-transform: uppercase;
+              }
+              // ==============details info==================
+              .item-details {
+              @include item;
+                .item {
+                  display: flex;
+                  align-items: center;
+                  gap: 3px;
+                  p {
+                    font-weight: 500;
+                    font-size: 14px;
+                  }
+                }
+              }
+              // ==============featuer==================
+              .featuer {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                .item {
+                  display: flex;
+                  align-items: center;
+                  p {
+                    font-weight: 500;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        //<!------------- skills----------- -->
+        .skills
+        {
+          background-color: #e6e6e6;
+          padding: 10px;
+          border-radius: 10px;
+          margin-top: 20px;
+          .items-container
+          {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            .item-skills{
+             @include item();
+              i {
+                @include icon
+              }
+
+            }
+          }
+        }
+        //<!------------- Nots----------- -->
+        .notes
+        {
+          background-color: #e6e6e6;
+          padding: 10px;
+          border-radius: 10px;
+          margin-block: 20px;
+
+          h3{
+
+          }
+          .item-notes{
+            @include item();
+            align-items: flex-start;
+            i{
+              @include icon
+            }
+            p{
+
+            }
+
+          }
+        }
+        //<!------------- buttons----------- -->
+          .buttons
+          {
+            direction: ltr;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            button
+            {
+              padding: 10px 20px;
+              border-radius: 25px;
+              border: none;
+              font-weight: 500;
+              font-size: 18px;
+              cursor: pointer;
+            }
+            .btn-d-done
+            {
+              background-color: #0081c8;
+              color: #fff;
+            }
+            .btn-d-close
+            {
+                background-color: #c2c2c2;
+            }
+          }
+    }
+  }
+}
